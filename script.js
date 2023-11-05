@@ -1,27 +1,24 @@
 const body = document.querySelector("body"),
- sideBar = body.querySelector("nav"),
- toggle  = body.querySelector(".toggle"),
- searchBtn = body.querySelector(".search-box"),
- modeSwitch = body.querySelector(".toggle-switch"),
- modeText = body.querySelector(".mode-text");
+  sidebar = body.querySelector("nav"),
+  toggle = body.querySelector(".toggle"),
+  searchBtn = body.querySelector(".search-box"),
+  modeSwitch = body.querySelector(".toggle-switch"),
+  modeText = body.querySelector(".mode-text");
 
- toggle.addEventListener("click", () => {
-    sideBar.classList.toggle("close");
- });
+toggle.addEventListener("click", () => {
+  sidebar.classList.toggle("close");
+});
 
- searchBtn.addEventlistener("click", () => {
-    sideBar.classList.add.remove("close");
- });
+searchBtn.addEventListener("click", () => {
+  sidebar.classList.remove("close");
+});
 
- modeSwitch.addEventListener("click", () => {
-    body.classList.toggle("dark");
+modeSwitch.addEventListener("click", () => {
+  body.classList.toggle("dark");
 
-    if (body.classList.contains("dark")) {
-        modeText.innerText = "light Mode";
-        
-    } else {
-        modeText.innerText = "Dark Mode";
-    }
- });
-
- 
+  if (body.classList.contains("dark")) {
+    modeText.innerText = "Light mode";
+  } else {
+    modeText.innerText = "Dark mode";
+  }
+});
